@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.WriteMemo">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="50dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/start"
+            android:hint="@string/input"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_toLeftOf="@+id/to"
+            android:layout_alignBottom="@+id/to"/>
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"/>
+
+        <EditText
+            android:id="@+id/end"
+            android:hint="@string/input"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_toRightOf="@+id/to"
+            android:layout_alignBottom="@+id/to"/>
+
+        <TimePicker
+            android:id="@+id/selecttime"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:timePickerMode="spinner"
+            android:layout_below="@+id/to" />
+
+        <Button
+            android:id="@+id/getstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selecttime"
+            android:text="@string/getstart"
+            android:layout_alignLeft="@+id/start"/>
+
+        <Button
+            android:id="@+id/getend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selecttime"
+            android:text="@string/getend"
+            android:layout_alignRight="@+id/end"/>
+
+        <EditText
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/getend"/>
+
+        <Button
+            android:id="@+id/sureadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sureadd"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/getstart"/>
+
+        <Button
+            android:id="@+id/cancaladd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancaladd"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/getend"/>
+
+
+    </RelativeLayout>
+</layout>

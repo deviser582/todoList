@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/main_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_below="@+id/deadline" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:textSize="25dp"
+            android:layout_below="@+id/main_part" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textSize="25dp"
+            android:layout_below="@id/main_part"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+</layout>
